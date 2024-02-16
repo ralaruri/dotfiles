@@ -9,6 +9,7 @@ local plugins = {
         "ruff",
         "mypy",
         "pyright",
+        "rust-analyzer"
       },
     },
   },
