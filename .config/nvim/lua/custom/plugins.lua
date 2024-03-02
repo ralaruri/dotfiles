@@ -9,7 +9,12 @@ local plugins = {
         "ruff",
         "mypy",
         "pyright",
-        "rust-analyzer"
+        "rust-analyzer",
+        "eslint-lsp",
+        "js-debug-adapter",
+        "prettier",
+        "typescript-language-server",
+        "lua-language-server",
       },
     },
   },
