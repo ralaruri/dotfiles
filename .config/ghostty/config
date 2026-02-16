@@ -1,0 +1,15 @@
+theme=Dracula
+font-size = 19
+background-opacity = 0.7
+background-blur-radius = 20
+macos-titlebar-style = "hidden"
+window-padding-x = 10
+window-padding-y = 10
+keybind = global:cmd+grave_accent=toggle_quick_terminal
+quick-terminal-animation-duration = 0.1
+
+#tmux
+keybind = cmd+shift+left_bracket=text:\x02p
+keybind = cmd+shift+right_bracket=text:\x02n
+keybind = cmd+comma=text:\x02\x2c
+keybind = cmd+t=text:\x02c
