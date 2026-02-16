@@ -53,11 +53,9 @@ stow -D .
 - uv: `brew install uv`
 - ghostty: `brew install --cask ghostty`
 - rectangle: `brew install --cask rectangle`
-- alacritty: `brew install --cask alacritty`
-- amethyst: `brew install --cask amethyst`
 - vscode: `brew install --cask visual-studio-code`
 
 ### Main Configurations in this Repo:
 #### Neovim
 #### Tmux
-#### Alacritty
+#### Ghostty
