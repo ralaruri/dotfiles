@@ -31,3 +31,13 @@ esac
 
 # Google Cloud SDK — use asdf-managed Python
 export CLOUDSDK_PYTHON=$(asdf which python3)
+export PATH="$HOME/.local/bin:$PATH"
+
+# --- Zsh Plugins ---
+
+# Autosuggestions — grey text inline suggestions from history
+source /usr/local/opt/zsh-autosuggestions/share/zsh-autosuggestions/zsh-autosuggestions.zsh
+ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=#808080"
+
+# Syntax highlighting — colorizes commands as you type
+source /usr/local/opt/zsh-syntax-highlighting/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
