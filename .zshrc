@@ -41,3 +41,21 @@ ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=#808080"
 
 # Syntax highlighting — colorizes commands as you type
 source /usr/local/opt/zsh-syntax-highlighting/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+
+# --- nb daily note ---
+
+# Create or open today's daily note in nb, organized by month folder
+nb-daily() {
+  local month=$(date +"%Y-%m")
+  local today=$(date +"%Y-%m-%d")
+  local title=$(date +"%A, %B %d, %Y")
+  local template="$HOME/.config/nb/templates/daily.md"
+
+  if nb ls "${month}/${today}.md" &>/dev/null; then
+    nb edit "${month}/${today}.md"
+  else
+    nb add "${month}/${today}.md" \
+      --content "$(sed -e "s/__TITLE__/${title}/" -e "s/__DATE__/${today}/" "$template")"
+    nb edit "${month}/${today}.md"
+  fi
+}
