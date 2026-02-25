@@ -41,21 +41,29 @@ stow -D .
 
 > **Note:** If stow reports conflicts, it means a real file (not a symlink) already exists at the target. Back it up and remove it, then re-run `stow .`.
 
-## Prereqs installation:
-- Homebrew: `/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"`
-- stow: `brew install stow`
-- neovim: `brew install neovim`
-- tmux: `brew install tmux`
-- starship: `curl -sS https://starship.rs/install.sh | sh`
-- poetry: `curl -sSL https://install.python-poetry.org | python3 -`
-- direnv: `brew install direnv`
-- asdf: `brew install asdf`
-- uv: `brew install uv`
-- ghostty: `brew install --cask ghostty`
-- rectangle: `brew install --cask rectangle`
-- vscode: `brew install --cask visual-studio-code`
+## Prereqs
 
-### Main Configurations in this Repo:
-#### Neovim
-#### Tmux
-#### Ghostty
+```bash
+# Package manager
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+
+# Core tools
+brew install stow neovim tmux direnv asdf uv nb
+
+# Prompts & shell
+curl -sS https://starship.rs/install.sh | sh
+curl -sSL https://install.python-poetry.org | python3 -
+
+# Apps
+brew install --cask ghostty rectangle visual-studio-code
+```
+
+## Configurations
+
+| Tool | Path | Description |
+|------|------|-------------|
+| Neovim | `.config/nvim/` | Editor config (Kickstart-based) |
+| Tmux | `.config/tmux/` | Terminal multiplexer |
+| Ghostty | `.config/ghostty/` | Terminal emulator |
+| nb | `.config/nb/` | Daily note templates |
+| Zsh | `.zshrc` | Shell config, plugins, and `nb-daily` function |
